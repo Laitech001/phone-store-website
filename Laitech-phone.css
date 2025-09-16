@@ -5,42 +5,44 @@ body {
   margin: 1rem auto;
   font-family: Arial, sans-serif;
   background-color: #fff;
-  color: #000;
+  color: #1C1C1C;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 20% 1fr;
-  min-height: 100vh;
-  gap: 1rem;
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#side-bar {
-  background-color: #164FE0;
+.logo-name {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-#side-bar ul {
-  margin: 0;
-  padding: 0;
-  background-color: #164FE0;
-  position: fixed;
+.logo-name img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
-
-#side-bar li a {
-  display: block;
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #164FE0;
-  color: #fff;
-  text-align: left;
-  width: 100%;
+.logo-name span {
+  font-size: 30px;
   font-weight: bold;
 }
-#side-bar li a:hover {
-  background-color: #0b2c8a;
+
+nav li {
+  list-style: none;
+  display: inline;
+}
+nav li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #1C1C1C;
+  padding: 8px;
 }
 
 header {
-  background-color: #164FE0;
+  background-color: #F5F7FA;
   text-align: center;
   font-size: 1.3rem;
   padding: 1.5rem;
@@ -52,18 +54,18 @@ header .logo {
   margin-bottom: 0.5rem;
 }
 header h1 {
-  color: #fff;
+  color: #1C1C1C;
   margin: 0;
 }
 header h2 {
-  color: #fff;
+  color: #1C1C1C;
   margin: 0;
   font-size: 1rem;
   font-weight: normal;
 }
 
 header p {
-  color: #fff;
+  color: #1C1C1C;
   margin: 0.5rem 0 0 0;
   font-size: 1.5rem;
   font-weight: bold;
@@ -109,7 +111,7 @@ header p {
   font-size: 1.1rem;
 }
 .card .whatsapp-btn {
-  background-color: #164FE0;
+  background-color: #1E90FF;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -120,14 +122,17 @@ header p {
   align-items: center;
   display: inline-flex;
 }
+.card .whatsapp-btn:hover {
+  background-color: #164FE0;
+}
 .card a {
   text-align: center;
 }
 
 footer {
-  background-color: #164FE0;
+  background-color: #F5F7FA;
   text-align: center;
-  color: #fff;
+  color: #1C1C1C;
   padding: 1rem;
   position: relative;
   bottom: 0;
