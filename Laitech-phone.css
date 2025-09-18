@@ -63,11 +63,20 @@ nav li a:hover {
   .logo-name {
     text-align: center;
   }
+  nav ul {
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
   nav li a {
     font-size: 16px;
     padding: 6px;
     display: block;
     text-align: center;
+  }
+  header {
+    margin-top: 0;
   }
 }
 
