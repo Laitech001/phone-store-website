@@ -21,8 +21,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-left: 5px;
-  background-color: #1E88E5;
-  color: #212121;
+  background-color: #05182E;
+  color: #ffffff;
 }
 
 .logo-name {
@@ -48,7 +48,7 @@ nav li a {
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
-  color: #1C1C1C;
+  color: #ffffff;
   padding: 8px;
   transition: background-color 0.3s ease;
 }
@@ -81,11 +81,11 @@ nav li a:hover {
 }
 
 header {
-  background-color: #1976D2;
+  background-color: #1E88E5;
   text-align: center;
   font-size: 1.3rem;
   padding: 1.5rem;
-  color: #212121;
+  color: #ffffff;
 }
 header .logo {
   width: 100px;
@@ -94,18 +94,18 @@ header .logo {
   margin-bottom: 0.5rem;
 }
 header h1 {
-  color: #1C1C1C;
+  color: #ffff;
   margin: 0;
 }
 header h2 {
-  color: #1C1C1C;
+  color: #ffff;
   margin: 0;
   font-size: 1rem;
   font-weight: normal;
 }
 
 header p {
-  color: #1C1C1C;
+  color: #ffff;
   margin: 0.5rem 0 0 0;
   font-size: 1.5rem;
   font-weight: bold;
@@ -117,13 +117,13 @@ header p {
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  background-color: #1E88E5;
+  background-color: #ffff;
   color: #000;
 }
 
 .card {
-  background-color: #1976D2;
-  padding: 1rem;
+  background-color: #ffff;
+  padding: auto 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
@@ -136,6 +136,10 @@ header p {
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
+.card .ribbon {
+  background-color: #ddd;
+  width: 100%;
+}
 
 .card h3 {
   margin: 0.5rem 0;
@@ -146,6 +150,7 @@ header p {
   color: #FFC107;
   font-size: 1.1rem;
 }
+
 .card .whatsapp-btn {
   background-color: #0D47A1;
   color: #FFC107;
@@ -167,8 +172,8 @@ header p {
 }
 
 footer {
-  background-color: #FFC107;
-  color: #2C2C2C;
+  background-color: #05182E;
+  color: #ffff;
   text-align: center;
   font-weight: bold;
   padding: 1rem;
