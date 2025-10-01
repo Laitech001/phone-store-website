@@ -1,3 +1,4 @@
+// whatsapp link button js code begin.
 const phoneNumber = '2347062639160';
 
 function whatsappLink(productName, productPrice) {
@@ -5,3 +6,5 @@ function whatsappLink(productName, productPrice) {
   const whatsapplnk = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
   window.open(whatsapplnk, '_blank');
 }
+//whatsapp link button js code end.
+
