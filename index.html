@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>📱Laitech</title>
-  <link rel="stylesheet" href="Laitech-phone.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="icon" type="image/x-icon" href="image/laitech-logo-2.jpg">
 </head>
 <body>
@@ -15,25 +15,59 @@
       </marquee>
     </div>
 
-    <div class="top-header">
-      <div class="logo-name">
-        <img src="image/laitech-logo.jpg">
-        <span>Laitech Gadget</span>
+    <section class="top-header-container">
+      <div class="top-header">
+        <div class="logo-name">
+          <img src="image/laitech-logo.jpg">
+          <span>Laitech Gadget</span>
+        </div>
+
+        <div class="search-bar-menu">
+          <input type="text" placeholder="Search for products">
+          <button>Search</button>
+        </div>
+
+        <div class="login-container">
+          <div class="login">
+            <img src="image/login.png">
+            <span>Log in</span>
+          </div>
+        </div>
+
+          <button class="cart-btn-container">
+            <div class="icon-div">
+              <img src="image/cart-icon.png" alt="cart icon" width="35px" height="30px" color="white">
+
+            <span>0</span>
+            </div>
+            <p>Cart</p>
+          </button>
+         
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="Laitech-phone.html">Cart</a>
-          </li>
-          <li>
-            <a href="Laitech-about.html">About</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+
+      <div class="links-div"> 
+
+        <div class="all-links-button">
+          <button class="mybtn">
+            <img src="image/menu-icon.jpeg" alt="Menu Icon" width="18px" height="18px">
+            <span>All</span>
+          </button>
+        </div>
+
+        <div class="phones-nav">
+              <nav class="nav-bar">
+                <ul>
+                  <li><a href="#">Iphone</a></li>
+                  <li><a href="#">Samsung</a></li>
+                  <li><a href="#">Tecno</a></li>
+                  <li><a href="#">Infinix</a></li>
+                  <li><a href="#">Redmi</a></li>
+                </ul>
+              </nav>
+        </div>
+
+      </div>
+    </section>
 
   <header>
     <img src="image/laitech-logo.jpg" alt="Laitech Logo" class="logo">
@@ -44,14 +78,7 @@
   <div class="latest-deal"> 
     <h1>Hot & Latest Deal</h1>
   </div>
-  <section class="products">
-
-    <div class="card">
-      <img src="image/iphone-17-pro-max-pakistan-price-600x600.jpg" alt="Phone 1">
-      <h3>iPhone 17 Pro Max</h3>
-      <p class="price">₦3,500,000</p>
-      <a onclick="whatsappLink('Iphone 17 Pro Max', '₦3,500,000')" class="whatsapp-btn">Order Now on WhatsApp</a>
-    </div>
+  <section class="products js-products">
 
     <div class="card">
       <img src="image/iphone_16pro__erw9alves2qa_large_2x.png" alt="Phone 1">
@@ -122,27 +149,6 @@
       <p class="price">₦1,500,000</p>
       <a onclick="whatsappLink('Samsung Galaxy S24 Ultra', '₦1,500,000')" class="whatsapp-btn">Order Now on WhatsApp</a>
     </div>
-
-    <div class="card">
-      <img src="image/samsung-s21-uk.png" alt="Phone 3">
-      <h3 class="product-name">Samsung s21 (128gb)</h3>
-      <p class="price">₦290,000</p>
-      <a onclick="whatsappLink('Samsung S21', '₦290,000')" class="whatsapp-btn">Order Now on WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="image/samsung-23-ultra.png" alt="Phone 3">
-      <h3 class="product-name">Samsung S23 ultra</h3>
-      <p class="price">₦950,000</p>
-      <a onclick="whatsappLink('Samsung S23 Ultra', '₦950,000')" class="whatsapp-btn">Order Now on WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="image/samsung-10.jpg" alt="Phone 3">
-      <h3 class="product-name">Samsung 10 (8gb / 128gb)</h3>
-      <p class="price">210,000</p>
-      <a onclick="whatsappLink('Samsung S10', '₦210,000')" class="whatsapp-btn">Order Now on WhatsApp</a>
-    </div>
   </section>
 
   <footer>
@@ -150,6 +156,7 @@
     <p>© 2025 Laitech Gadgets Shop | Powered by Me 💻</p>
   </footer>
 
+  <script src="javascript/products.js"></script>
   <script src="javascript/Laitech.js"></script>
 
 </body>

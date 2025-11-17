@@ -1,3 +1,16 @@
+const productCard = document.querySelector('.js-products');
+products.forEach((product) => {
+  productCard.innerHTML += `
+    <div class="card">
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p class="price">${product.price}</p>
+      <a href="#" onclick=${product.button.onclick} class="whatsapp-btn">"${product.button.text}"</a>
+    </div>
+  `
+});
+
+
 // whatsapp link button js code begin.
 const phoneNumber = '2347062639160';
 
