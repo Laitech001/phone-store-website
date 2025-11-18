@@ -3,9 +3,16 @@ products.forEach((product) => {
   productCard.innerHTML += `
     <div class="card">
       <img src="${product.image}" alt="${product.name}">
-      <h3>${product.name}</h3>
+      <span class="product-name">${product.name}</span>
+      <p class="description">Apple ${product.name}, ${product.description.ram} with ${product.description.storage}</p>
       <p class="price">${product.price}</p>
-      <a href="#" onclick=${product.button.onclick} class="whatsapp-btn">"${product.button.text}"</a>
+      <div class="buttons">
+
+        <a href="#" onclick=${product.button.onclick} class="whatsapp-btn">${product.button.text}</a>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      
     </div>
   `
 });
