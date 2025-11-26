@@ -1,0 +1,54 @@
+body {
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  margin:auto;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #1C1C1C;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #05182E;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.logo-name {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.logo-name img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.logo-name span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.home-page {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.home-page button {
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+}
+.home-page button:hover {
+  text-decoration: underline;
+  color: #ffffffe6;
+}

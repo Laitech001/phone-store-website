@@ -8,9 +8,9 @@ products.forEach((product) => {
       <p class="price">${product.price}</p>
       <div class="buttons">
 
-        <a href="#" onclick=${product.button.onclick} class="whatsapp-btn">${product.button.text}</a>
+        <a href="#" onclick="${product.button.onclick}" class="whatsapp-btn">${product.button.text}</a>
 
-        <button class="add-to-cart-btn">Add to Cart</button>
+        <button class="add-to-cart-btn js-add-to-cart">Add to Cart</button>
       </div>
       
     </div>
@@ -27,4 +27,12 @@ function whatsappLink(productName, productPrice) {
   window.open(whatsapplnk, '_blank');
 }
 //whatsapp link button js code end.
+
+// Add to cart button js code begin.
+document.querySelectorAll('.js-add-to-cart')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+      console.log('Added to cart');
+    })
+  })
 
