@@ -3,17 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>📱Laitech</title>
+  <title>📱Laitech | Online shopping for Phones and Gadgets</title>
   <link rel="stylesheet" href="index.css">
   <link rel="icon" type="image/x-icon" href="image/laitech-logo-2.jpg">
 </head>
 <body>
-
-    <div class="announcement">
-      <marquee behavior="scroll" direction="left" scrollamount="5">
-        Welcome to Laitech Gadgets Shop! Get the best deals on phones and accessories. Contact us on WhatsApp: <a href="https://wa.me/2347062639160" target="_blank" style="color: yellow; text-decoration: underline;">+234 706 263 9160</a>
-      </marquee>
-    </div>
 
     <section class="top-header-container">
       <div class="top-header">
@@ -37,8 +31,8 @@
           <button class="cart-btn-container"
           onclick="window.location.href='cart.html'">
             <div class="icon-div">
-              <img src="image/cart-icon.png" alt="cart icon" width="35px" height="30px">
-            <span>0</span>
+              <img src="image/cart-icon.png" alt="cart icon">
+              <span class="js-cart-quantity">0</span>
             </div>
             <p>Cart</p>
           </button>
@@ -47,21 +41,15 @@
 
       <div class="links-div"> 
 
-        <div class="all-links-button">
-          <button class="mybtn">
-            <img src="image/menu-icon.jpeg" alt="Menu Icon" width="18px" height="18px">
-            <span>All</span>
-          </button>
-        </div>
-
         <div class="phones-nav">
               <nav class="nav-bar">
                 <ul>
-                  <li><a href="#">Iphone</a></li>
-                  <li><a href="#">Samsung</a></li>
-                  <li><a href="#">Tecno</a></li>
-                  <li><a href="#">Infinix</a></li>
-                  <li><a href="#">Redmi</a></li>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="iphone-page.html">iPhone</a></li>
+                  <li><a href="samsung-page.html">Samsung</a></li>
+                  <li><a href="tecno-page.html">Tecno</a></li>
+                  <li><a href="infinix-page.html">Infinix</a></li>
+                  <li><a href="redmi-page.html">Redmi</a></li>
                 </ul>
               </nav>
         </div>
@@ -70,8 +58,7 @@
     </section>
 
   <header>
-    <img src="image/laitech-logo.jpg" alt="Laitech Logo" class="logo">
-    <h1>📱Laitech Gagdets Shop</h1>
+    <h2>📱Laitech Gagdets Store</h2>
     <p>Affordable and Quality Phones and Accessories for You</p>
   </header>
 
@@ -79,7 +66,7 @@
     <h1>Hot & Latest Deal</h1>
   </div>
   <section class="products js-products">
-    <!-- Products will be dynamically inserted here -->
+    <!-- PRODUCTS WILL BE DYNAMICALLY DISPLAY HERE... -->
   </section>
 
   <footer>
@@ -87,6 +74,7 @@
     <p>© 2025 Laitech Gadgets Shop | Powered by Me 💻</p>
   </footer>
 
+  <script src="javascript/cart.js"></script>
   <script src="javascript/products.js"></script>
   <script src="javascript/Laitech.js"></script>
 
