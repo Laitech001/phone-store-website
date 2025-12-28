@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #05182E;
+  --secondary-color: #1E88E5;
+  --accent-color: #F5A623;
+  --text-color: #1C1C1C;
+  --background-color: #fff;
+  --hover-sec-color: #164FE0;
+  --hover-accent-color: #F7B731;
+}
+
 body {
   width: 100%;
   max-width: 1400px;
@@ -196,13 +206,105 @@ body {
   border-radius: 5px;
 }
 
-.product-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  align-items: center;
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
-  padding: 0px 10px;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ffff;
+  color: #000;
+}
+
+.card {
+  width: 300px;
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-sizing: border-box;
+  transition: transform 0.4s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+.card img {
+  background: transparent;
+  max-width: 100%;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: auto;
+}
+.card span .product-name {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin: 8px 0px 0px 0px;
+}
+.card .product-specs p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 7px 0px 0px 0px;
+}
+.card .product-price {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.1rem;
+  margin: 4px 0px 0px 0px;
+}
+.card .product-rating {
+  font-size: 11px;
+  color: #F5A623;
+  margin-bottom: 8px;
+  margin-top: 3px;
+}
+.card .product-rating span {
+  color: #555;
+  font-size: 12px;
+}
+
+.card .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.card .whatsapp-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  align-items: center;
+  display: inline-flex;
+  transition: background-color 0.5s ease;
+}
+.card .whatsapp-btn:hover {
+  background-color: var(--hover-sec-color);
+}
+.card a {
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  align-items: center;
+  display: inline-flex;
+  transition: background-color 0.5s ease;
+}
+.add-to-cart-btn:hover {
+  background-color: var(--hover-accent-color);
 }

@@ -1,12 +1,12 @@
 const productCard = document.querySelector('.js-products');
 
 // FILTER PRODUCTA THAT THE PRICE >= ₦600,000
-const filteredProducts = products.filter(product => {
-  return product.price >= 600000;
+const iphoneProducts = products.filter(product => {
+  return product.brand === 'iphone';
 });
-console.log(filteredProducts);
+console.log(iphoneProducts);
 
-  filteredProducts.forEach((product) => {
+  iphoneProducts.forEach((product) => {
     productCard.innerHTML += `
       <div class="card">
         <img src="${product.image}" alt="${product.name}">
@@ -15,7 +15,7 @@ console.log(filteredProducts);
         <div class=" product-specs">
           <p>${product.specs.ram}, ${product.specs.storage}, ${product.specs.size}</p>
         </div>
-
+        
         <p class="product-price">₦${product.price.toLocaleString()}</p>
 
         <div class="product-rating">
@@ -34,7 +34,6 @@ console.log(filteredProducts);
     `
   });
 
-
 // THE CODE BELOW GENERATE WHATSAPP LINK FOR THE BUY NOW BUTTON.
 const buyNowButtons = document.querySelectorAll('.js-whatsapp-btn');
 
@@ -52,32 +51,3 @@ buyNowButtons.forEach((button) => {
   });
 });
 //WHATSAPP LINK CODES ENDED HERE.
-
-// ADD TO CART FUNCTIONALITY
-document.querySelectorAll('.js-add-to-cart')
-  .forEach((button) => {
-    button.addEventListener('click', () => {
-      const productName = button.getAttribute('data-product-name');
-
-      const existingItem = cart.find(item => item.productName === productName);
-
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({
-        productName: productName,
-        quantity: 1
-      },);
-      }
-
-      updateCartCount();
-      console.log(cart);
-    });
-  });
-
-  // CODES TO UPDATE CART ITEM COUNT IN THE NAVBAR
-  function updateCartCount() {
-    const cartBadge = document.querySelector('.js-cart-quantity');
-    const totalItems = cart.reduce((total, item) => total += item.quantity, 0);
-    cartBadge.textContent = totalItems;
-  }

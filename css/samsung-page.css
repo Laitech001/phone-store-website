@@ -1,0 +1,310 @@
+:root {
+  --primary-color: #05182E;
+  --secondary-color: #1E88E5;
+  --accent-color: #F5A623;
+  --text-color: #1C1C1C;
+  --background-color: #fff;
+  --hover-sec-color: #164FE0;
+  --hover-accent-color: #F7B731;
+}
+
+body {
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  margin:auto;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #1C1C1C;
+}
+.announcement {
+  background-color: #FFC107;
+  color: #2C2C2C;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.top-header-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0 10px;
+  background-color: #05182E;
+  color: #fff;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding: 20px 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.logo-name {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+}
+.logo-name:hover {
+  cursor: pointer;
+}
+.logo-name img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.logo-name span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.search-bar-menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+.search-bar-menu input {
+  width: 500px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.search-bar-menu input:focus {
+  outline: none;
+}
+.search-bar-menu button {
+  background-color: #1E88E5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+.search-bar-menu button:hover {
+  background-color: #0D47A1;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+}
+.login-container:hover{
+  border: 1px solid white;
+}
+.login-container .login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.login-container .login img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+/*cart styling page 116 in css, page 46 in html*/
+.cart-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.cart-btn-container:hover {
+  border: 1px solid white;
+}
+.icon-div {
+  position: relative;
+}
+.icon-div img {
+  width: 40px;
+  height: 35px;
+  filter: invert(1);
+}
+.cart-btn-container span {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  box-sizing: border-box;
+}
+.cart-btn-container p {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+/* All button and Navigation styling */
+.links-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 10px;
+  padding-bottom: 20px;
+}
+
+.nav-bar ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+.nav-bar ul li a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+.nav-bar ul li a:hover {
+  background-color: #164FE0;
+  border-radius: 5px;
+}
+.nav-bar ul li a.active {
+  background-color: #0D47A1;
+  border-radius: 5px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ffff;
+  color: #000;
+}
+
+.card {
+  width: 300px;
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: transform 0.4s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+.card img {
+  background: transparent;
+  max-width: 100%;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: auto;
+}
+.card span .product-name {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin: 8px 0px 0px 0px;
+}
+.card .product-specs p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 7px 0px 0px 0px;
+}
+.card .product-price {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.1rem;
+  margin: 4px 0px 0px 0px;
+}
+.card .product-rating {
+  font-size: 11px;
+  color: #F5A623;
+  margin-bottom: 8px;
+  margin-top: 3px;
+}
+.card .product-rating span {
+  color: #555;
+  font-size: 12px;
+}
+
+.card .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.card .whatsapp-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  align-items: center;
+  display: inline-flex;
+  transition: background-color 0.5s ease;
+}
+.card .whatsapp-btn:hover {
+  background-color: var(--hover-sec-color);
+}
+.card a {
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  align-items: center;
+  display: inline-flex;
+  transition: background-color 0.5s ease;
+}
+.add-to-cart-btn:hover {
+  background-color: var(--hover-accent-color);
+}

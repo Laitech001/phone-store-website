@@ -211,7 +211,7 @@ header p {
 }
 
 .latest-deal {
-  background-color: #05182E;
+  background-color: var(--primary-color);
   color: #ffffff;
   padding: 0.2rem 0.5rem;
   margin-bottom: 0;
@@ -255,7 +255,7 @@ header p {
   margin: 8px 0px 0px 0px;
 }
 .card .product-specs p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #555;
   margin: 7px 0px 0px 0px;
 }
