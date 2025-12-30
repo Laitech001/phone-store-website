@@ -17,14 +17,6 @@ body {
   background-color: #fff;
   color: #1C1C1C;
 }
-.announcement {
-  background-color: #FFC107;
-  color: #2C2C2C;
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
 
 .top-header-container {
   width: 100%;
@@ -32,10 +24,9 @@ body {
   margin: auto;
   box-sizing: border-box;
   padding: 0 10px;
-  background-color: #05182E;
+  background-color: var(--primary-color);
   color: #fff;
 }
-
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -50,13 +41,6 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
-  background-color: transparent;
-  color: white;
-  outline: none;
-  border: none;
-}
-.logo-name:hover {
-  cursor: pointer;
 }
 .logo-name img {
   width: 40px;
@@ -85,7 +69,7 @@ body {
   outline: none;
 }
 .search-bar-menu button {
-  background-color: #1E88E5;
+  background-color: var(--secondary-color);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -100,9 +84,10 @@ body {
   cursor: pointer;
   font-size: 15px;
   font-weight: bold;
+  transition: background-color 0.5s ease;
 }
 .search-bar-menu button:hover {
-  background-color: #0D47A1;
+  background-color: var(--accent-color);
 }
 
 .login-container {
@@ -146,7 +131,7 @@ body {
   border: none;
 }
 .cart-btn-container:hover {
-  border: 1px solid white;
+  outline: 1px solid white;
 }
 .icon-div {
   position: relative;
@@ -172,140 +157,82 @@ body {
   font-weight: bold;
   color: #fff;
 }
+/* End of cart styling */
 
-
-/* All button and Navigation styling */
-.links-div {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 0px 10px;
-  padding-bottom: 20px;
-}
-
-.nav-bar ul {
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  display: flex;
-  gap: 10px;
-}
-.nav-bar ul li a {
-  display: inline-block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-}
-.nav-bar ul li a:hover {
-  background-color: #164FE0;
-  border-radius: 5px;
-}
-.nav-bar ul li a.active {
-  background-color: #0D47A1;
-  border-radius: 5px;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: #ffff;
-  color: #000;
-}
-
-.card {
-  width: 300px;
-  background-color: #f1f1f1;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.2s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-}
-.card img {
-  background: transparent;
-  max-width: 100%;
-  width: 300px;
-  height: 300px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin: auto;
-}
-.card span .product-name {
-  color: var(--primary-color);
-  font-size: 1rem;
-  margin: 8px 0px 0px 0px;
-}
-.card .product-specs p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 7px 0px 0px 0px;
-}
-.card .product-price {
-  font-weight: bold;
-  color: #000;
-  font-size: 1.1rem;
-  margin: 4px 0px 0px 0px;
-}
-.card .product-rating {
-  font-size: 11px;
-  color: #F5A623;
-  margin-bottom: 8px;
-  margin-top: 3px;
-}
-.card .product-rating span {
-  color: #555;
-  font-size: 12px;
-}
-
-.card .buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-
-.card .whatsapp-btn {
+/* product details page styling */
+.product-page .h1-elem {
   background-color: var(--secondary-color);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
-  align-items: center;
-  display: inline-flex;
-  transition: background-color 0.5s ease;
+  color: var(--text-color);
+  padding: 10px;
+  margin-top: 0;
 }
-.card .whatsapp-btn:hover {
-  background-color: var(--hover-sec-color);
+
+.image-spec-div .image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #ccc;
 }
-.card a {
+.image-specs-div {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.image-specs-div .image-container {
+  width: 40%;
+  margin-left: 10px;
+}
+.image-specs-div .product-info {
+  width: 60%;
+  padding-top: 0px;
+}
+/* styling product specs list*/
+.product-info h1 {
+  color: var(--secondary-color);
   text-align: center;
 }
-
-.add-to-cart-btn {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
-  align-items: center;
-  display: inline-flex;
-  transition: background-color 0.5s ease;
+.product-specs {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  
 }
-.add-to-cart-btn:hover {
+.product-specs li {
+  list-style-type: none;
+}
+.product-specs .product-name, .product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.action-btn {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.action-btn .buy-now-button,
+.add-to-cart-button {
+  padding: 6px 20px;
+  font-size: 16px;
+  border: none;
+  font-weight: bold;
+}
+.action-btn .buy-now-button {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.action-btn .buy-now-button:hover {
+  background-color: var(--hover-sec-color);
+}
+.action-btn .add-to-cart-button {
+  background-color: var(--accent-color);
+}
+.action-btn .add-to-cart-button:hover {
   background-color: var(--hover-accent-color);
 }

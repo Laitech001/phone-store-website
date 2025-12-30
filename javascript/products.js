@@ -7,14 +7,17 @@ const products = [{
     ram: '8GB RAM',
     storage: '256GB ROM',
     size: '6.7 inches',
+    display: '6.7-inch Super Retina XDR',
+    processor: 'A17 Bionic chip',
   },
   price: 1560000,
-  isHotDeal: true,
-  isFeatured: true,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
-    }
+    },
+  isHotDeal: true,
+  isFeatured: true,
+  description: 'The iPhone 17 Pro Max is the latest flagship smartphone from Apple.' 
 }, {
   id: 'apple-iphone-17-pro-max-512gb-0002',
   brand: 'iphone',
@@ -612,7 +615,7 @@ const products = [{
     text: 'Buy Now'
    }
 }, {
-  id: 'samsung-s22-ultra-128gb-0040',
+  id: 'samsung-s22-128gb-0040',
   brand: 'samsung',
   image: 'image/samsung-s22(128).jpg',
   name: 'Samsung GALAXY S22',
@@ -626,4 +629,154 @@ const products = [{
     type: 'whatsapp',
     text: 'Buy Now'
    }
-}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}];
+}, {
+  id: 'samsung-s24-128gb-0041',
+  brand: 'samsung',
+  image: 'image/samsung-s24(128).jpg',
+  name: 'Samsung GALAXY S24',
+  specs: {
+    ram: '8GB RAM',
+    storage: '128GB ROM',
+    size: '6.1 inches',
+  },
+  price: 600000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-s22-plus-256gb-0042',
+  brand: 'samsung',
+  image: 'image/samsung-s22plus(256).jpg',
+  name: 'Samsung GALAXY S22 Plus',
+  specs: {
+    ram: '8GB RAM',
+    storage: '256GB ROM',
+    size: '6.6 inches',
+  },
+  price: 450000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-s21-ultra-256gb-0043',
+  brand: 'samsung',
+  image: 'image/samsung-s21ultra(256).jpg',
+  name: 'Samsung GALAXY S21 Ultra',
+  specs: {
+    ram: '12GB RAM',
+    storage: '256GB ROM',
+    size: '6.8 inches',
+  },
+  price: 400000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-s21-128gb-0044',
+  brand: 'samsung',
+  image: 'image/samsung-s21(128).jpg',
+  name: 'Samsung GALAXY S21',
+  specs: {
+    ram: '8GB RAM',
+    storage: '128GB ROM',
+    size: '6.2 inches',
+  },
+  price: 310000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-s24-fe-256gb-0045',
+  brand: 'samsung',
+  image: 'image/samsung-s24fe(256).jpg',
+  name: 'Samsung GALAXY S24 FE',
+  specs: {
+    ram: '8GB RAM',
+    storage: '256GB ROM',
+    size: '6.7 inches',
+  },
+  price: 630000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-a56-128gb-0046',
+  brand: 'samsung',
+  image: 'image/samsung-a56(128).jpg',
+  name: 'Samsung GALAXY A56',
+  specs: {
+    ram: '8GB RAM',
+    storage: '128GB ROM',
+    size: '6.7 inches',
+  },
+  price: 480000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-a07-128gb-0047',
+  brand: 'samsung',
+  image: 'image/samsung-a07(128).jpg',
+  name: 'Samsung GALAXY A07',
+  specs: {
+    ram: '4GB RAM',
+    storage: '128GB ROM',
+    size: '6.7 inches',
+  },
+  price: 160000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-a16-256gb-0048',
+  brand: 'samsung',
+  image: 'image/samsung-a16(256).jpg',
+  name: 'Samsung GALAXY A16',
+  specs: {
+    ram: '8GB RAM',
+    storage: '256GB ROM',
+    size: '6.7 inches',
+  },
+  price: 340000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-a56-128gb-0049',
+  brand: 'samsung',
+  image: 'image/samsung-a56(128).jpg',
+  name: 'Samsung GALAXY A56',
+  specs: {
+    ram: '8GB RAM',
+    storage: '128GB ROM',
+    size: '6.7  inches',
+  },
+  price: 485000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {
+  id: 'samsung-a16-128gb-0050',
+  brand: 'samsung',
+  image: 'image/samsung-a16(128).jpg',
+  name: 'Samsung GALAXY A16',
+  specs: {
+    ram: '6GB RAM',
+    storage: '128GB ROM',
+    size: '6.7 inches',
+  },
+  price: 235000,
+   button: {
+    type: 'whatsapp',
+    text: 'Buy Now'
+   }
+}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}];

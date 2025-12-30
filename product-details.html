@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="css/product-details.css">
+</head>
+<body>
+  <header>
+    <section class="top-header-container">
+      <div class="top-header">
+        <div class="logo-name">
+          <img src="image/laitech-logo.jpg">
+          <span>Laitech Gadget</span>
+        </div>
+
+        <div class="search-bar-menu">
+          <input type="text" placeholder="Search for products">
+          <button>Search</button>
+        </div>
+
+        <button class="login-container">
+          <div class="login">
+            <img src="image/login.png">
+            <span>Log in</span>
+          </div>
+        </button>
+
+        <button class="cart-btn-container"
+          onclick="window.location.href='cart.html'">
+            <div class="icon-div">
+              <img src="image/cart-icon.png" alt="cart icon">
+              <span class="js-cart-quantity">0</span>
+            </div>
+            <p>Cart</p>
+        </button>   
+      </div>
+    </section>
+  </header>
+
+  <main class="product-page">
+    <h1 class="h1-elem">Products details</h1>
+
+  </main>
+  
+  <script src="javascript/products.js"></script>
+  <script src="javascript/product-details.js"></script>
+</body>
+</html>

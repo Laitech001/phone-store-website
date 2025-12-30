@@ -1,14 +1,11 @@
 const productCard = document.querySelector('.js-products');
+const page = document.body.dataset.page;
+function renderProduct(productList, productCard) {
+  productCard.innerHTML = "";
 
-// FILTER PRODUCTA THAT THE PRICE >= ₦600,000
-const filteredProducts = products.filter(product => {
-  return product.price >= 600000;
-});
-console.log(filteredProducts);
-
-  filteredProducts.forEach((product) => {
+  productList.forEach((product) => {
     productCard.innerHTML += `
-      <div class="card">
+      <div class="card" data-product-id="${product.id}">
         <img src="${product.image}" alt="${product.name}">
         <span class="product-name">${product.name}</span>
 
@@ -29,11 +26,21 @@ console.log(filteredProducts);
 
           <button class="add-to-cart-btn js-add-to-cart" data-product-name="${product.name}">Add to Cart</button>
         </div>
-        
       </div>
     `
-  });
+  })
+}
 
+if (page === 'homepage'){
+ const hotdeals = products.filter(p => p.price >= 600000);
+ renderProduct(hotdeals, productCard);
+} else if (page === 'iphone') {
+  const iphoneProducts = products.filter(p => p.brand === 'iphone');
+  renderProduct(iphoneProducts, productCard);
+} else if (page === 'samsung') {
+  const samsungProducts = products.filter(p => p.brand === 'samsung');
+  renderProduct(samsungProducts, productCard);
+}
 
 // THE CODE BELOW GENERATE WHATSAPP LINK FOR THE BUY NOW BUTTON.
 const buyNowButtons = document.querySelectorAll('.js-whatsapp-btn');
@@ -52,6 +59,21 @@ buyNowButtons.forEach((button) => {
   });
 });
 //WHATSAPP LINK CODES ENDED HERE.
+
+// PASSING PRODUCT DETAIL TO PRODUCT DETAILS PAGE BY PRODUCTid
+
+  const allProduct = document.querySelectorAll('.card');
+
+  allProduct.forEach((card) => {
+    card.addEventListener('click', () => {
+      const productId = card.dataset.productId;
+      console.log(productId);
+    
+    window.location.href=`product-details.html?id=${productId}`;
+    });
+  });
+
+// END OF THE PRODUCT DETAIL FUNCTIONALITY CODE
 
 // ADD TO CART FUNCTIONALITY
 document.querySelectorAll('.js-add-to-cart')
