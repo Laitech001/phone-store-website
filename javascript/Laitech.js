@@ -60,6 +60,41 @@ buyNowButtons.forEach((button) => {
 });
 //WHATSAPP LINK CODES ENDED HERE.
 
+products.forEach(product => {
+  if (!product.name || !product.brand) {
+    console.log('Bad product:', product);
+  }
+});
+
+// THE CODE BELOW ADDED FUNCTIONALITY TO THE SEARCH BAR
+const searchInput = document.querySelector('.js-search-bar');
+const searchBtn = document.querySelector('.js-search-btn');
+
+searchBtn.addEventListener('click', () => {
+  const query = searchInput.value.toLowerCase();
+
+  if (!query) {
+    renderProduct(products, productCard);
+    return;
+  }
+
+  const filteredProducts = products.filter(product => {
+    const name = product.name?.toLowerCase() ||'';
+    const brand = product.brand?.toLowerCase() ||'';
+
+    return (
+      name.includes(query) || brand.includes(query)
+    );
+  })
+
+  renderProduct(filteredProducts, productCard);
+});
+
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') searchBtn.click();
+});
+// END OF SEARCH BAR FUNCTIONALITY CODE
+
 // PASSING PRODUCT DETAIL TO PRODUCT DETAILS PAGE BY PRODUCTid
 
   const allProduct = document.querySelectorAll('.card');

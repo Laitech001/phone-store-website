@@ -2,7 +2,7 @@ const products = [{
   id: 'apple-iphone-17-256gb-0001',
   brand: 'iphone',
   image: 'image/iphone-17-jumia-img.jpg',
-  name: 'Iphone 17',
+  name: 'iPhone 17',
   specs: {
     ram: '8GB RAM',
     storage: '256GB ROM',
@@ -22,7 +22,7 @@ const products = [{
   id: 'apple-iphone-17-pro-max-512gb-0002',
   brand: 'iphone',
   image:'image/iphone-17pm-jumia-img.jpg',
-  name: 'Iphone 17 Pro Max',
+  name: 'iPhone 17 Pro Max',
   specs: {
     ram: '12GB RAM',
     storage: '512GB ROM',
@@ -39,7 +39,7 @@ const products = [{
   id: 'apple-iphone-16-pro-max-512gb-0003',
   brand: 'iphone',
   image:'image/iphone-16pm-jumia-img.jpg',
-  name: 'Iphone 16 Pro Max',
+  name: 'iPhone 16 Pro Max',
   specs: {
     ram: '8GB RAM',
     storage: '512GB ROM',
@@ -56,7 +56,7 @@ const products = [{
   id: 'apple-iphone-16-pro-512gb-0004',
   brand: 'iphone',
   image:'image/iphone-16p-(128gb)-laitech-img.jpg',
-  name: 'Iphone 16 Pro',
+  name: 'iPhone 16 Pro',
   specs: {
     ram: '8GB RAM',
     storage: '128GB ROM',
@@ -73,7 +73,7 @@ const products = [{
   id: 'apple-iphone-15-plus-256gb-0005',
   brand: 'iphone',
   image:'image/iphone-15plus-(256).jpg',
-  name: 'Iphone 15 Plus (Blue)',
+  name: 'iPhone 15 Plus (Blue)',
   specs: {
     ram: '6GB RAM',
     storage: '256GB ROM',
@@ -90,7 +90,7 @@ const products = [{
   id: 'apple-iphone-15-pro-max-256gb-0006',
   brand: 'iphone',
   image:'image/iphone-15promax-jumia-mg.jpg',
-  name: 'Iphone 15 Pro Max',
+  name: 'iPhone 15 Pro Max',
   specs: {
     ram: '8GB RAM',
     storage: '256GB ROM',
@@ -107,7 +107,7 @@ const products = [{
   id: 'apple-iphone-15-pro-256gb-0007',
   brand: 'iphone',
   image:'image/iphone-15p(128)-laitech.jpg',
-  name: 'Iphone 15 Pro',
+  name: 'iPhone 15 Pro',
   specs: {
     ram: '8GB RAM',
     storage: '128GB ROM',
