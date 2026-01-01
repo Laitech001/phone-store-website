@@ -9,7 +9,8 @@
 </head>
 <body data-page="homepage">
 
-    <section class="top-header-container">
+  <!--DESKTOP HEADER SECTION (DEFAULT)-->
+    <section class="top-header-container header-desktop">
       <div class="top-header">
         <div class="logo-name">
           <img src="image/laitech-logo.jpg">
@@ -52,9 +53,39 @@
                 </ul>
               </nav>
         </div>
-
       </div>
     </section>
+
+  <!--MOBILE HEADER SECTION-->
+    <section class="header-mobile">
+      <div class="mobile-top">
+        <button class="menu-btn">☰</button>
+
+        <div class="logo-name">
+          <img src="image/laitech-logo.jpg">
+          <span>Laitech</span>
+        </div>
+
+        <div class="mobile-icons">
+          <button class="search-icon">🔍</button>
+
+          <button onclick="window.location.href='cart.html'">
+            🛒 <span class="js-cart-quantity">0</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="iphone-page.html">iPhone</a>
+        <a href="samsung-page.html">Samsung</a>
+        <a href="tecno-page.html">Tecno</a>
+        <a href="infinix-page.html">Infinix</a>
+        <a href="redmi-page.html">Redmi</a>
+        <a href="login.html">Log in</a>
+      </nav>
+    </section>
+
 
   <header>
     <h2>📱Laitech Gagdets Store</h2>

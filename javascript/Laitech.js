@@ -5,19 +5,21 @@ function renderProduct(productList, productCard) {
 
   productList.forEach((product) => {
     productCard.innerHTML += `
-      <div class="card" data-product-id="${product.id}">
-        <img src="${product.image}" alt="${product.name}">
-        <span class="product-name">${product.name}</span>
+      <div class="card">
+        <div class="clickable-card-area" data-product-id="${product.id}">
+          <img src="${product.image}" alt="${product.name}">
+          <span class="product-name">${product.name}</span>
 
-        <div class=" product-specs">
-          <p>${product.specs.ram}, ${product.specs.storage}, ${product.specs.size}</p>
-        </div>
+          <div class=" product-specs">
+            <p>${product.specs.ram}, ${product.specs.storage}, ${product.specs.size}</p>
+          </div>
 
-        <p class="product-price">₦${product.price.toLocaleString()}</p>
+          <p class="product-price">₦${product.price.toLocaleString()}</p>
 
-        <div class="product-rating">
-          ⭐⭐⭐⭐⭐ 
-          <span>(5.0)</span>
+          <div class="product-rating">
+            ⭐⭐⭐⭐⭐ 
+            <span>(5.0)</span>
+          </div>
         </div>
 
         <div class="buttons">
@@ -60,12 +62,6 @@ buyNowButtons.forEach((button) => {
 });
 //WHATSAPP LINK CODES ENDED HERE.
 
-products.forEach(product => {
-  if (!product.name || !product.brand) {
-    console.log('Bad product:', product);
-  }
-});
-
 // THE CODE BELOW ADDED FUNCTIONALITY TO THE SEARCH BAR
 const searchInput = document.querySelector('.js-search-bar');
 const searchBtn = document.querySelector('.js-search-btn');
@@ -96,8 +92,7 @@ searchInput.addEventListener('keydown', e => {
 // END OF SEARCH BAR FUNCTIONALITY CODE
 
 // PASSING PRODUCT DETAIL TO PRODUCT DETAILS PAGE BY PRODUCTid
-
-  const allProduct = document.querySelectorAll('.card');
+  const allProduct = document.querySelectorAll('.clickable-card-area');
 
   allProduct.forEach((card) => {
     card.addEventListener('click', () => {
@@ -131,10 +126,3 @@ document.querySelectorAll('.js-add-to-cart')
       console.log(cart);
     });
   });
-
-  // CODES TO UPDATE CART ITEM COUNT IN THE NAVBAR
-  function updateCartCount() {
-    const cartBadge = document.querySelector('.js-cart-quantity');
-    const totalItems = cart.reduce((total, item) => total += item.quantity, 0);
-    cartBadge.textContent = totalItems;
-  }

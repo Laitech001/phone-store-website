@@ -17,7 +17,7 @@ const products = [{
     },
   isHotDeal: true,
   isFeatured: true,
-  description: 'The iPhone 17 Pro Max is the latest flagship smartphone from Apple.' 
+  description: 'The iPhone 17 Pro Max is the latest flagship smartphone from Apple.'
 }, {
   id: 'apple-iphone-17-pro-max-512gb-0002',
   brand: 'iphone',

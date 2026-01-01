@@ -1,10 +1,20 @@
+:root {
+  --primary-color: #05182E;
+  --secondary-color: #1E88E5;
+  --accent-color: #F5A623;
+  --text-color: #1C1C1C;
+  --background-color: #fff;
+  --hover-sec-color: #164FE0;
+  --hover-accent-color: #F7B731;
+}
+
 body {
   width: 100%;
   max-width: 1400px;
   height: 100vh;
   margin:auto;
   font-family: Arial, sans-serif;
-  background-color: #ffffff9a;
+  background-color: #fff;
   color: #1C1C1C;
 }
 
@@ -63,7 +73,7 @@ header {
 /* Cart items styling */
 .cart-items {
   padding: 20px;
-  background-color: #fff;
+  background-color: #f1f1f1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
 }
@@ -81,7 +91,6 @@ header {
 
 .product-img {
   display: flex;
-  align-items: top;
   gap: 10px;
 }
 .product-img img{
@@ -90,7 +99,7 @@ header {
   object-fit: cover;
 }
 .product-img span {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: light;
 }
 
@@ -103,11 +112,12 @@ header {
 }
 
 .remove-btn {
-  background-color: #0D47A1;
+  background-color: rgba(255, 0, 0, 0.811);
   color: white;
-  border: 1px solid #145ac2;
   padding: 0.5rem 2rem;
-  font-size: 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 2px;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
 }
@@ -144,7 +154,7 @@ header {
 .cart-summary {
   max-height: 300px;
   padding: 10px 15px;
-  background-color: #fff;
+  background-color: #f1f1f1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
   box-sizing: border-box;

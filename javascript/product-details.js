@@ -38,3 +38,19 @@ showProductDetails.innerHTML = `
   if(!product) {
     showProductDetails.innerHTML = `<p>Product not found</p>`;
   }
+
+  const buyNowButtons = document.querySelectorAll('.js-whatsapp-btn');
+
+buyNowButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    const productName = button.closest('.card').querySelector('.product-name').textContent;
+    const productPriceText = button.closest('.card').querySelector('.product-price').textContent;
+    const productPrice = parseInt(productPriceText.replace('₦', '').replace(/,/g, ''));
+
+    const phoneNumber = '2347062639160';
+    const message = `Hello! I am Interested in the ${productName} for ₦${productPrice.toLocaleString()}`;
+    const whatsapplnk = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsapplnk, '_blank');
+  });
+});
