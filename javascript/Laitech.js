@@ -1,3 +1,12 @@
+// MENU ICON SHOWS MOBILE NAVIGATION
+const menuBtn = document.querySelector('.menu-btn');
+const menuBar = document.querySelector('.mobile-nav');
+
+menuBtn.addEventListener('click', () => {
+  mobileNav.classList.toggle('open');
+})
+// CODE END FOR MENU ICON
+
 const productCard = document.querySelector('.js-products');
 const page = document.body.dataset.page;
 function renderProduct(productList, productCard) {
