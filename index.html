@@ -67,7 +67,7 @@
         </div>
 
         <div class="mobile-icons">
-          <button class="search-icon">🔍</button>
+          <button class="login">👤</button>
 
           <button onclick="window.location.href='cart.html'" class="cart-icon">
             🛒 <span class="js-cart-quantity">0</span>
@@ -76,7 +76,7 @@
       </div>
 
       <nav class="mobile-nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="iphone-page.html">iPhone</a>
         <a href="samsung-page.html">Samsung</a>
         <a href="tecno-page.html">Tecno</a>
@@ -84,7 +84,15 @@
         <a href="redmi-page.html">Redmi</a>
         <a href="login.html">Log in</a>
       </nav>
+
+      <!--search bar full width, hiding by default-->
+      <div class="search-bar-menu">
+        <input class="js-search-bar" type="text" placeholder="Search for products">
+        <button class="js-search-btn">Search</button>
+      </div>
+
     </section>
+  <!--THE END OF MOBILE HEADER CODE-->
 
 
   <header>
@@ -106,7 +114,6 @@
 
   <script src="javascript/products.js"></script>
   <script src="javascript/Laitech.js"></script>
-  <script src="javascript/cart.js"></script>
 
 </body>
 </html>

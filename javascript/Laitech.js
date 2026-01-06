@@ -3,7 +3,7 @@ const menuBtn = document.querySelector('.menu-btn');
 const menuBar = document.querySelector('.mobile-nav');
 
 menuBtn.addEventListener('click', () => {
-  mobileNav.classList.toggle('open');
+  menuBar.classList.toggle('open');
 })
 // CODE END FOR MENU ICON
 
@@ -35,11 +35,11 @@ function renderProduct(productList, productCard) {
 
           <a href="#" class="whatsapp-btn js-whatsapp-btn">${product.button.text}</a>
 
-          <button class="add-to-cart-btn js-add-to-cart" data-product-name="${product.name}">Add to Cart</button>
+          <button class="add-to-cart-btn js-add-to-cart" data-id="${product.id}">Add to Cart</button>
         </div>
       </div>
     `
-  })
+  });
 }
 
 if (page === 'homepage'){
@@ -53,22 +53,37 @@ if (page === 'homepage'){
   renderProduct(samsungProducts, productCard);
 }
 
+// wrapped all render and attach function in a single function
+function renderAndAttach(productsToRender) {
+  renderProduct(productsToRender, productCard);
+  attachBuyNowEvent();
+  attachAddToCartEvent();
+}
+
 // THE CODE BELOW GENERATE WHATSAPP LINK FOR THE BUY NOW BUTTON.
 const buyNowButtons = document.querySelectorAll('.js-whatsapp-btn');
 
-buyNowButtons.forEach((button) => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault();
-    const productName = button.closest('.card').querySelector('.product-name').textContent;
-    const productPriceText = button.closest('.card').querySelector('.product-price').textContent;
-    const productPrice = parseInt(productPriceText.replace('₦', '').replace(/,/g, ''));
+function attachBuyNowEvent() {
+  buyNowButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
 
-    const phoneNumber = '2347062639160';
-    const message = `Hello! I am Interested in the ${productName} for ₦${productPrice.toLocaleString()}`;
-    const whatsapplnk = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(whatsapplnk, '_blank');
+      const productName = button.closest('.card').querySelector('.product-name').textContent;
+
+      const productPriceText = button.closest('.card').querySelector('.product-price').textContent;
+
+      const productPrice = parseInt(productPriceText.replace('₦', '').replace(/,/g, ''));
+
+      const phoneNumber = '2347062639160';
+
+      const message = `Hello! I am Interested in the ${productName} for ₦${productPrice.toLocaleString()}`;
+      
+      const whatsapplnk = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+      window.open(whatsapplnk, '_blank');
+    });
   });
-});
+}
+attachBuyNowEvent();
 //WHATSAPP LINK CODES ENDED HERE.
 
 // THE CODE BELOW ADDED FUNCTIONALITY TO THE SEARCH BAR
@@ -76,28 +91,36 @@ const searchInput = document.querySelector('.js-search-bar');
 const searchBtn = document.querySelector('.js-search-btn');
 
 searchBtn.addEventListener('click', () => {
-  const query = searchInput.value.toLowerCase();
+  const query = searchInput.value.toLowerCase().trim();
 
   if (!query) {
-    renderProduct(products, productCard);
+    renderAndAttach(products)
     return;
   }
 
+  const keywords = query.split(' ').filter(Boolean);
+
   const filteredProducts = products.filter(product => {
-    const name = product.name?.toLowerCase() ||'';
-    const brand = product.brand?.toLowerCase() ||'';
+    const name = product.name?.toLowerCase() || '';
+    const brand = product.brand?.toLowerCase() || '';
 
-    return (
-      name.includes(query) || brand.includes(query)
+    const searchableText = `${name} ${brand}`;
+
+    return keywords.every(word =>
+      searchableText.includes(word)
     );
+
+  });
+
+  renderAndAttach(filteredProducts);
+
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      searchBtn.click();
+    }
   })
-
-  renderProduct(filteredProducts, productCard);
 });
 
-searchInput.addEventListener('keydown', e => {
-  if (e.key === 'Enter') searchBtn.click();
-});
 // END OF SEARCH BAR FUNCTIONALITY CODE
 
 // PASSING PRODUCT DETAIL TO PRODUCT DETAILS PAGE BY PRODUCTid
@@ -115,23 +138,44 @@ searchInput.addEventListener('keydown', e => {
 // END OF THE PRODUCT DETAIL FUNCTIONALITY CODE
 
 // ADD TO CART FUNCTIONALITY
-document.querySelectorAll('.js-add-to-cart')
-  .forEach((button) => {
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function addToCart(productId) {
+  // check if product already exists in cart
+  const item = cart.find(cartItem => cartItem.id === productId);
+
+  if (item) {
+    item.qty += 1; // increase quantity
+  } else {
+    cart.push({ id: productId, qty: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  //updating the cart quantity on the homepage
+  updateCartQuantity();
+}
+
+// connect the add to cart button
+
+function attachAddToCartEvent() {
+  document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () => {
-      const productName = button.getAttribute('data-product-name');
-
-      const existingItem = cart.find(item => item.productName === productName);
-
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({
-        productName: productName,
-        quantity: 1
-      },);
-      }
-
-      updateCartCount();
-      console.log(cart);
+      addToCart(button.dataset.id);
     });
   });
+}
+attachAddToCartEvent();
+
+// homepage cart quantiy update code
+let cartQuantity = document.querySelector('.js-cart-quantity');
+
+function updateCartQuantity() {
+  cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+
+  cartQuantity.textContent = totalQty;
+}
+
+updateCartQuantity();

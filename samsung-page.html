@@ -9,7 +9,7 @@
 </head>
 <body data-page="samsung">
 
-  <section class="top-header-container">
+  <section class="top-header-container header-desktop">
     <div class="top-header">
       <button class="logo-name" onclick="window.location.href='index.html'">
         <img src="image/laitech-logo.jpg">
@@ -32,7 +32,7 @@
       onclick="window.location.href='cart.html'">
           <div class="icon-div">
             <img src="image/cart-icon.png" alt="cart icon">
-            <span>0</span>
+            <span class="js-cart-quantity">0</span>
           </div>
           <p>Cart</p>
       </button>
@@ -56,6 +56,38 @@
 
     </div>
   </section>
+
+   <!--MOBILE HEADER SECTION-->
+    <section class="header-mobile">
+      <div class="mobile-top">
+        <button class="menu-btn">☰</button>
+
+        <div class="logo-name">
+          <img src="image/laitech-logo.jpg">
+          <span>Laitech</span>
+        </div>
+
+        <div class="mobile-icons">
+          <button class="search-icon">🔍</button>
+
+          <button onclick="window.location.href='cart.html'" class="cart-icon">
+            🛒 
+            <span class="js-cart-quantity">0</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav">
+        <a href="index.html" >Home</a>
+        <a href="iphone-page.html">iPhone</a>
+        <a href="samsung-page.html" class="active">Samsung</a>
+        <a href="tecno-page.html">Tecno</a>
+        <a href="infinix-page.html">Infinix</a>
+        <a href="redmi-page.html">Redmi</a>
+        <a href="login.html">Log in</a>
+      </nav>
+    </section>
+  <!--THE END OF MOBILE HEADER CODE-->
 
   <section class="products js-products">
     <!-- PRODUCTS WILL BE DYNAMICALLY DISPLAY HERE... -->
