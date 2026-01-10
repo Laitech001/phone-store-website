@@ -168,14 +168,16 @@ function attachAddToCartEvent() {
 attachAddToCartEvent();
 
 // homepage cart quantiy update code
-let cartQuantity = document.querySelector('.js-cart-quantity');
+let cartQuantity = document.querySelectorAll('.js-cart-quantity');
 
 function updateCartQuantity() {
   cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
 
-  cartQuantity.textContent = totalQty;
+  cartQuantity.forEach((el) => {
+    el.textContent = totalQty;
+  });
 }
 
 updateCartQuantity();

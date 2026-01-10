@@ -339,13 +339,14 @@ footer {
 }
 
 /* mobile section styling */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   body {
     width: 100%;
-    max-width: 768px;
+    max-width: 600px;
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
 
   .header-desktop {
@@ -410,7 +411,7 @@ footer {
 
   .products {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     padding: 5px;
     gap: 5px;
     justify-content: center;
@@ -419,7 +420,7 @@ footer {
   }
 
   .card {
-    width: 180px;
+    width: 100%;
     background-color: #f1f1f1;
     padding: 0.3rem;
     border: 1px solid #ddd;
@@ -434,12 +435,13 @@ footer {
 
   .card img {
     background: transparent;
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 8px;
     object-fit: cover;
     margin: auto;
+    margin-bottom: 4px;
   }
 
   .card .buttons {

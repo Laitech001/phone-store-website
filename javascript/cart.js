@@ -151,6 +151,10 @@ function orderNow() {
   const subject = "New Order";
   const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
   window.open(mailtoURL, "_blank");
+
+  setTimeout(() => {
+    window.open(mailtoURL, '_blank');
+  }, 500);
 }
 
 document.querySelector('.order-now').addEventListener('click', orderNow);
