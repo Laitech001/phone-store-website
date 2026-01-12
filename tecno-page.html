@@ -3,58 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buy your Samsung here | Laitech</title>
+  <title>Buy your Tecno here | Laitech</title>
   <link rel="stylesheet" href="css/brand-pages.css">
   <link rel="icon" type="image/x-icon" href="image/laitech-logo-2.jpg">
 </head>
-<body data-page="samsung">
+<body data-page="tecno">
 
-  <section class="top-header-container header-desktop">
-    <div class="top-header">
-      <button class="logo-name" onclick="window.location.href='index.html'">
-        <img src="image/laitech-logo.jpg">
-        <span>Laitech Gadget</span>
-      </button>
-
-      <div class="search-bar-menu">
-        <input class="js-search-bar" type="text" placeholder="Search for products">
-        <button class="js-search-btn">Search</button>
-      </div>
-
-      <button class="login-container">
-        <div class="login">
-          <img src="image/login.png">
-          <span>Log in</span>
+  <!--DESKTOP HEADER SECTION (DEFAULT)-->
+    <section class="top-header-container header-desktop">
+      <div class="top-header">
+        <div class="logo-name">
+          <img src="image/laitech-logo.jpg">
+          <span>Laitech Gadget</span>
         </div>
-      </button>
 
-      <button class="cart-btn-container"
-      onclick="window.location.href='cart.html'">
-          <div class="icon-div">
-            <img src="image/cart-icon.png" alt="cart icon">
-            <span class="js-cart-quantity">0</span>
+        <div class="search-bar-menu">
+          <input class="js-search-bar" type="text" placeholder="Search for products">
+          <button class="js-search-btn">Search</button>
+        </div>
+
+        <button class="login-container">
+          <div class="login">
+            <img src="image/login.png">
+            <span>Log in</span>
           </div>
-          <p>Cart</p>
-      </button>
-      
-    </div>
+        </button>
 
-    <div class="links-div"> 
-
-      <div class="phones-nav">
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="iphone-page.html">iPhone</a></li>
-            <li><a href="samsung-page.html" class="active">Samsung</a></li>
-            <li><a href="tecno-page.html">Tecno</a></li>
-            <li><a href="infinix-page.html">Infinix</a></li>
-          </ul>
-        </nav>
+        <button class="cart-btn-container"
+          onclick="window.location.href='cart.html'">
+            <div class="icon-div">
+              <img src="image/cart-icon.png" alt="cart icon">
+              <span class="js-cart-quantity">0</span>
+            </div>
+            <p>Cart</p>
+        </button>   
       </div>
 
-    </div>
-  </section>
+      <div class="links-div"> 
+
+        <div class="phones-nav">
+              <nav class="nav-bar">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="iphone-page.html">iPhone</a></li>
+                  <li><a href="samsung-page.html">Samsung</a></li>
+                  <li><a href="tecno-page.html" class="active">Tecno</a></li>
+                  <li><a href="infinix-page.html">Infinix</a></li>
+                </ul>
+              </nav>
+        </div>
+      </div>
+    </section>
 
   <!--MOBILE HEADER SECTION-->
   <section class="header-mobile">
@@ -77,9 +76,9 @@
 
     <nav class="mobile-nav">
       <a href="index.html">Home</a>
-      <a href="iphone-page.html" class="active">iPhone</a>
+      <a href="iphone-page.html">iPhone</a>
       <a href="samsung-page.html">Samsung</a>
-      <a href="tecno-page.html">Tecno</a>
+      <a href="tecno-page.html" class="active">Tecno</a>
       <a href="infinix-page.html">Infinix</a>
     </nav>
 
@@ -88,12 +87,10 @@
       <input class="js-search-bar" type="text" placeholder="Search for products">
       <button class="js-search-btn">Search</button>
     </div>
+
   </section>
   <!--THE END OF MOBILE HEADER CODE-->
 
-  <section class="products js-products">
-    <!-- PRODUCTS WILL BE DYNAMICALLY DISPLAY HERE... -->
-  </section>
 
   <!--paragraph below contain a message that will show when a product is out of stock-->
   <p class="out-of-stock-message">The Product is out of stock!</p>
@@ -103,8 +100,9 @@
     No Product Found! <br>
     Try searching by brand or model.
   </p>
-  
+
   <script src="javascript/products.js"></script>
   <script src="javascript/Laitech.js"></script>
+  
 </body>
 </html>

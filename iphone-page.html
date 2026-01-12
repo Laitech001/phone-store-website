@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy your iPhone here | Laitech</title>
-  <link rel="stylesheet" href="css/iphone-page.css">
+  <link rel="stylesheet" href="css/brand-pages.css">
   <link rel="icon" type="image/x-icon" href="image/laitech-logo-2.jpg">
 </head>
 <body data-page="iphone">
@@ -49,7 +49,6 @@
             <li><a href="samsung-page.html">Samsung</a></li>
             <li><a href="tecno-page.html">Tecno</a></li>
             <li><a href="infinix-page.html">Infinix</a></li>
-            <li><a href="redmi-page.html">Redmi</a></li>
           </ul>
         </nav>
       </div>
@@ -68,7 +67,7 @@
         </div>
 
         <div class="mobile-icons">
-          <button class="search-icon">🔍</button>
+          <button class="login-container">👤</button>
 
           <button onclick="window.location.href='cart.html'" class="cart-icon">
             🛒 <span class="js-cart-quantity">0</span>
@@ -82,15 +81,26 @@
         <a href="samsung-page.html">Samsung</a>
         <a href="tecno-page.html">Tecno</a>
         <a href="infinix-page.html">Infinix</a>
-        <a href="redmi-page.html">Redmi</a>
-        <a href="login.html">Log in</a>
       </nav>
+
+      <!--search bar full width on mobile device-->
+      <div class="search-bar-menu">
+        <input class="js-search-bar" type="text" placeholder="Search for products">
+        <button class="js-search-btn">Search</button>
+      </div>
     </section>
   <!--THE END OF MOBILE HEADER CODE-->
 
   <section class="products js-products">
     <!-- PRODUCTS WILL BE DYNAMICALLY DISPLAY HERE... -->
   </section>
+
+  <p class="out-of-stock-message">The Product is out of stock!</p>
+
+  <p class="no-result">
+    No Product Found! <br>
+    Try searching by brand or model.
+  </p>
   
   <script src="javascript/products.js"></script>
   <script src="javascript/Laitech.js"></script>

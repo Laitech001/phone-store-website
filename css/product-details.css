@@ -236,3 +236,25 @@ body {
 .action-btn .add-to-cart-button:hover {
   background-color: var(--hover-accent-color);
 }
+
+/* mobile responsiveness */
+@media (max-width: 600px) {
+  body {
+    width: 400px;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+  }
+  .image-specs-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-specs-div .image-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .image-specs-div .product-info {
+    width: 100%;
+    padding-top: 20px;
+  }
+}

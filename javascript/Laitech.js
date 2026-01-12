@@ -9,6 +9,7 @@ menuBtn.addEventListener('click', () => {
 
 const productCard = document.querySelector('.js-products');
 const page = document.body.dataset.page;
+
 function renderProduct(productList, productCard) {
   productCard.innerHTML = "";
 
@@ -42,15 +43,35 @@ function renderProduct(productList, productCard) {
   });
 }
 
+// safe out of stock message in a variable
+const outOfStockMessage = document.querySelector('.out-of-stock-message');
+
+// function that checks stock status and displays message
+function checkStockStatus(list) {
+  if (list.length === 0) {
+    productCard.innerHTML = '';
+    outOfStockMessage.style.display = 'block';
+  } else {
+    outOfStockMessage.style.display = 'none';
+    renderProduct(list, productCard);
+  }
+}
+
 if (page === 'homepage'){
  const hotdeals = products.filter(p => p.price >= 600000);
- renderProduct(hotdeals, productCard);
+ checkStockStatus(hotdeals);
 } else if (page === 'iphone') {
   const iphoneProducts = products.filter(p => p.brand === 'iphone');
-  renderProduct(iphoneProducts, productCard);
+  checkStockStatus(iphoneProducts);
 } else if (page === 'samsung') {
   const samsungProducts = products.filter(p => p.brand === 'samsung');
-  renderProduct(samsungProducts, productCard);
+  checkStockStatus(samsungProducts);
+} else if (page === 'tecno') {
+  const tecnoProducts = products.filter(p => p.brand === 'tecno');
+  checkStockStatus(tecnoProducts);
+} else if (page === 'infinix') {
+  const infinixProducts = products.filter(p => p.brand === 'infinix');
+  checkStockStatus(infinixProducts);
 }
 
 // wrapped all render and attach function in a single function
@@ -88,39 +109,50 @@ attachBuyNowEvent();
 
 // THE CODE BELOW ADDED FUNCTIONALITY TO THE SEARCH BAR
 const searchInput = document.querySelector('.js-search-bar');
-const searchBtn = document.querySelector('.js-search-btn');
+const searchBtn = document.querySelectorAll('.js-search-btn');
+const noResultText = document.querySelector('.no-result');
 
-searchBtn.addEventListener('click', () => {
-  const query = searchInput.value.toLowerCase().trim();
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
 
-  if (!query) {
-    renderAndAttach(products)
-    return;
-  }
-
-  const keywords = query.split(' ').filter(Boolean);
-
-  const filteredProducts = products.filter(product => {
-    const name = product.name?.toLowerCase() || '';
-    const brand = product.brand?.toLowerCase() || '';
-
-    const searchableText = `${name} ${brand}`;
-
-    return keywords.every(word =>
-      searchableText.includes(word)
-    );
-
-  });
-
-  renderAndAttach(filteredProducts);
-
-  searchInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      searchBtn.click();
+    if (!query) {
+      renderAndAttach(products)
+      noResultText.style.display = 'none';
+      return;
     }
-  })
-});
 
+    const keywords = query.split(' ').filter(Boolean);
+
+    const filteredProducts = products.filter(product => {
+      const name = product.name?.toLowerCase() || '';
+      const brand = product.brand?.toLowerCase() || '';
+
+      const searchableText = `${name} ${brand}`;
+
+      return keywords.every(word =>
+        searchableText.includes(word)
+      );
+    });
+
+    renderAndAttach(filteredProducts);
+
+    if (filteredProducts.length === 0) {
+      noResultText.style.display = 'block';
+    } else {
+      noResultText.style.display = 'none';
+    }
+}
+
+searchBtn.forEach((button) => {
+  button.addEventListener('click', performSearch);
+  button.addEventListener('touchstart', performSearch);
+})
+
+searchInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    performSearch();
+  }
+});
 // END OF SEARCH BAR FUNCTIONALITY CODE
 
 // PASSING PRODUCT DETAIL TO PRODUCT DETAILS PAGE BY PRODUCTid
@@ -136,6 +168,19 @@ searchBtn.addEventListener('click', () => {
   });
 
 // END OF THE PRODUCT DETAIL FUNCTIONALITY CODE
+
+// LOGIN BUTTON FUNCTIONALITY
+const loginButtons = document.querySelectorAll('.login-container');
+
+function handleLoginClick(e) {
+  e.preventDefault();
+  alert('The Page is not available yet!');
+}
+
+loginButtons.forEach(button => {
+  button.addEventListener('click', handleLoginClick);
+  button.addEventListener('touchstart', handleLoginClick, { passive: true });
+});
 
 // ADD TO CART FUNCTIONALITY
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
