@@ -110,12 +110,12 @@ attachBuyNowEvent();
 //WHATSAPP LINK CODES ENDED HERE.
 
 // THE CODE BELOW ADDED FUNCTIONALITY TO THE SEARCH BAR
-const searchInput = document.querySelector('.js-search-bar');
-const searchBtn = document.querySelectorAll('.js-search-btn');
+const searchInputs = document.querySelectorAll('.js-search-bar');
+const searchBtns = document.querySelectorAll('.js-search-btn');
 const noResultText = document.querySelector('.no-result');
 
-function performSearch() {
-    const query = searchInput.value.toLowerCase().trim();
+function performSearch(inputValue = '') {
+    const query = inputValue.toLowerCase().trim();
 
     if (!query) {
       renderAndAttach(products)
@@ -145,15 +145,25 @@ function performSearch() {
     }
 }
 
-searchBtn.forEach((button) => {
-  button.addEventListener('click', performSearch);
-  button.addEventListener('touchstart', performSearch, {passive: true});
+searchBtns.forEach((button) => {  
+  const index = Array.from(searchBtns).indexOf(button);
+  button.addEventListener('click', () => {
+    const inputValue = searchInputs[index]?.value || '';
+    performSearch(inputValue);
+  });
+ 
+  button.addEventListener('touchstart', () => {
+    const inputValue = searchInputs[index]?.value || '';
+    performSearch(inputValue);
+  }, {passive: true});
 })
 
-searchInput.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    performSearch();
-  }
+searchInputs.forEach(input => {
+  input.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      performSearch(input.value);
+    }
+  });
 });
 // END OF SEARCH BAR FUNCTIONALITY CODE
 
