@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Details</title>
   <link rel="stylesheet" href="css/product-details.css">
+  <link rel="icon" type="image/x-icon" href="image/laitech-logo-2.jpg">
 </head>
 <body>
   <header>
-    <section class="top-header-container">
+    <!--Desktop Header-->
+    <section class="top-header-container header-desktop"> 
       <div class="top-header">
         <div class="logo-name">
           <img src="image/laitech-logo.jpg">
@@ -37,13 +39,40 @@
         </button>   
       </div>
     </section>
+
+    <!--Mobile Header-->
+    <section class="top-header-container header-mobile">
+      <div class="logo-name">
+        <img src="image/laitech-logo.jpg">
+        <span>Laitech Gadget</span>
+      </div>
+
+      <button class="cart-btn-container"
+      onclick="window.location.href='cart.html'">
+        <div class="icon-div">
+          <img src="image/cart-icon.png" alt="cart icon">
+          <span class="js-cart-quantity">0</span>
+        </div>
+        <p>Cart</p>
+      </button>
+
+    </section>
   </header>
 
   <main class="product-page">
     <h1 class="h1-elem">Products details</h1>
-
-  </main>
   
+    <!-- Product details will be dynamically inserted here -->
+  </main>
+
+  <div class="homepage-btn">
+    <button onclick="window.location.href='index.html'">Back to Homepage</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Laitech Gadget. All rights reserved.</p>
+  </footer>
+
   <script src="javascript/products.js"></script>
   <script src="javascript/product-details.js"></script>
 </body>

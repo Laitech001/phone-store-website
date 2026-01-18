@@ -16,7 +16,7 @@ const products = [{
       text: 'Buy Now'
     },
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   description: 'The iPhone 17 Pro Max is the latest flagship smartphone from Apple.'
 }, {
   id: 'apple-iphone-17-pro-max-512gb-0002',
@@ -27,10 +27,12 @@ const products = [{
     ram: '12GB RAM',
     storage: '512GB ROM',
     size: '6.9 inches',
+    display: '6.9-inch Super Retina XDR',
+    processor: 'A17 Bionic Chip'
   },
   price: 2750000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -44,10 +46,12 @@ const products = [{
     ram: '8GB RAM',
     storage: '512GB ROM',
     size: '6.7 inches',
+    display: '6.7-inch Super Retina XDR',
+    processor: 'A17 Bionic Chip'
   },
   price: 1900000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -61,10 +65,12 @@ const products = [{
     ram: '8GB RAM',
     storage: '128GB ROM',
     size: '6.3 inches',
+    display: '6.3-inch Super Retina XDR',
+    processor: 'A17 Bionic Chip'
   },
   price: 1650000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -78,10 +84,12 @@ const products = [{
     ram: '6GB RAM',
     storage: '256GB ROM',
     size: '6.7 inches',
+    display: '6.7-inch Super Retina XDR',
+    processor: 'A17 Bionic Chip'
   },
   price: 900000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -98,7 +106,7 @@ const products = [{
   },
   price: 950000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -115,7 +123,7 @@ const products = [{
   },
   price: 850000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -132,7 +140,7 @@ const products = [{
   },
   price: 2250000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -149,7 +157,7 @@ const products = [{
   },
   price: 1200000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -166,7 +174,7 @@ const products = [{
   },
   price:  1850000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -183,7 +191,7 @@ const products = [{
   },
   price: 1350000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -199,6 +207,8 @@ const products = [{
     size: '6.1 inches',
   },
   price: 590000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -214,6 +224,8 @@ const products = [{
     size: '6.1 inches',
   },
   price: 480000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -229,6 +241,8 @@ const products = [{
     size: '6.7 inches',
   },
   price: 550000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -245,7 +259,7 @@ const products = [{
   },
   price: 700000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -261,8 +275,8 @@ const products = [{
     size: '6.7 inches',
   },
   price: 670000,
-  isHotDeal: true,
-  isFeatured: true,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -278,6 +292,8 @@ const products = [{
     size: '6.1 inches',
   },
   price: 470000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -294,7 +310,7 @@ const products = [{
   },
   price: 800000,
   isHotDeal: true,
-  isFeatured: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -310,6 +326,8 @@ const products = [{
     size: '6.7 inches',
   },
   price: 950000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -325,6 +343,8 @@ const products = [{
     size: '6.1 inches',
   },
   price: 490000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -340,6 +360,8 @@ const products = [{
     size: '6.1 inches',
   },
   price: 400000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -370,6 +392,8 @@ const products = [{
     size: '6.7 inches',
   },
   price: 550000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -385,6 +409,8 @@ const products = [{
     size: '6.1 inches',
   },
   price: 800000,
+  isHotDeal: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -400,6 +426,8 @@ const products = [{
     size: '6.7 inches',
   },
   price: 700000,
+  isHotDeal: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -415,6 +443,8 @@ const products = [{
     size: '6.1 inches',
   },
   price: 300000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -430,6 +460,8 @@ const products = [{
     size: '5.8 inches',
   },
   price: 220000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -445,6 +477,8 @@ const products = [{
     size: '6.5 inches',
   },
   price: 450000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -460,6 +494,8 @@ const products = [{
     size: '6.5 inches',
   },
   price: 300000,
+  isHotDeal: false,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -475,6 +511,8 @@ const products = [{
     size: '6.7 inches',
   },
   price: 1150000,
+  isHotDeal: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -490,6 +528,8 @@ const products = [{
     size: '6.9 inches',
   },
   price: 1550000,
+  isHotDeal: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -505,6 +545,8 @@ const products = [{
     size: '6.7 inches',
   },
   price: 1200000,
+  isHotDeal: true,
+  isFeatured: false,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'
@@ -520,6 +562,8 @@ const products = [{
     size: '6.2 inches',
   },
   price: 900000,
+  isHotDeal: false,
+  isFeatured: true,
   button:{
       type: 'whatsapp',
       text: 'Buy Now'

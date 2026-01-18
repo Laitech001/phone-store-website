@@ -16,6 +16,8 @@ function renderProduct(productList, productCard) {
   productList.forEach((product) => {
     productCard.innerHTML += `
       <div class="card">
+        ${product.isHotDeal ? '<span  class="hot-deal-badge">Hot deal</span>' : ''}
+        ${product.isFeatured ? '<span     class="featured-badge">Featured</span>' : ''}
         <div class="clickable-card-area" data-product-id="${product.id}">
           <img src="${product.image}" alt="${product.name}">
           <span class="product-name">${product.name}</span>
@@ -145,7 +147,7 @@ function performSearch() {
 
 searchBtn.forEach((button) => {
   button.addEventListener('click', performSearch);
-  button.addEventListener('touchstart', performSearch);
+  button.addEventListener('touchstart', performSearch, {passive: true});
 })
 
 searchInput.addEventListener('keypress', (event) => {

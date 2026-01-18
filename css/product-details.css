@@ -18,6 +18,14 @@ body {
   color: #1C1C1C;
 }
 
+.header-mobile {
+  display: none;
+}
+
+.header-desktop {
+  display: block;
+}
+
 .top-header-container {
   width: 100%;
   max-width: 1400px;
@@ -183,9 +191,19 @@ body {
   padding: 0 20px;
 }
 .image-specs-div .image-container {
-  width: 40%;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 10px;
 }
+.image-specs-div .image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .image-specs-div .product-info {
   width: 60%;
   padding-top: 0px;
@@ -237,24 +255,84 @@ body {
   background-color: var(--hover-accent-color);
 }
 
-/* mobile responsiveness */
+.homepage-btn {
+  text-align: center;
+  margin-top: 10px;
+}
+.homepage-btn button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.homepage-btn button:hover {
+  outline: 1px solid #fff;
+}
+
+footer {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
 @media (max-width: 600px) {
+  .header-desktop {
+    display: none;
+  }
+
   body {
     width: 400px;
-    max-width: 600px;
+    height: auto;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
+
+  .header-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+  }
+
   .image-specs-div {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
     flex-direction: column;
+    gap: 10px;
+    margin: auto;
+    background: #fff;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .product-info {
+    flex: 1;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
-  .image-specs-div .image-container {
-    width: 100%;
-    margin-left: 0;
-  }
-  .image-specs-div .product-info {
-    width: 100%;
-    padding-top: 20px;
+
+  .action-btn {
+    flex-direction: row;
+    gap: 10px;
   }
 }

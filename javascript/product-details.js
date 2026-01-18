@@ -12,7 +12,7 @@ if (!product) {
 showProductDetails.innerHTML = `
   <section class="image-specs-div">
     <div class="image-container">
-      <img src="${product.image}" alt="${product.name}" class="product-image">
+      <img src="${product.image}" alt="${product.name}">
     </div>
 
     <div class="product-info">
@@ -27,8 +27,8 @@ showProductDetails.innerHTML = `
       </ul>
 
       <div class="action-btn">
-        <button class="buy-now-button">Buy Now</button>
-        <button class="add-to-cart-button">Add to Cart</button>
+        <button class="buy-now-button js-whatsapp-btn">Buy Now</button>
+        <button class="add-to-cart-button js-add-to-cart-btn" data-id="${product.id}">Add to Cart</button>
       </div>
     </div>
   </section>
@@ -44,13 +44,50 @@ showProductDetails.innerHTML = `
 buyNowButtons.forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
-    const productName = button.closest('.card').querySelector('.product-name').textContent;
-    const productPriceText = button.closest('.card').querySelector('.product-price').textContent;
-    const productPrice = parseInt(productPriceText.replace('₦', '').replace(/,/g, ''));
 
     const phoneNumber = '2347062639160';
-    const message = `Hello! I am Interested in the ${productName} for ₦${productPrice.toLocaleString()}`;
+
+    const message = `Hello! I am Interested in the ${product.name} for ₦${product.price.toLocaleString()}`;
     const whatsapplnk = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsapplnk, '_blank');
   });
 });
+
+// Add to Cart button functionality;
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const addToCartBtn = document.querySelector('.js-add-to-cart-btn');
+
+function addToCart (productId) {
+  const existingProduct = cart.find(item => item.id === productId);
+
+  if (existingProduct) {
+    existingProduct.qty += 1;
+  } else {
+    cart.push({ id: productId, qty: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  alert('Product added to cart!');
+
+  updateCartQuantity();
+}
+
+addToCartBtn.addEventListener('click', () => {
+  addToCart(product.id);
+});
+
+// homepage cart quantiy update code
+let cartQuantity = document.querySelectorAll('.js-cart-quantity');
+
+function updateCartQuantity() {
+  cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+
+  cartQuantity.forEach((el) => {
+    el.textContent = totalQty;
+  });
+}
+
+  updateCartQuantity();
